@@ -16,7 +16,7 @@
         }
     }
 
-    require_once __DIR__.'/Actor.php';
+    require_once __DIR__.'/Attori.php';
 
     
     $actorArray = [
