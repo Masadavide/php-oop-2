@@ -14,6 +14,10 @@
             $this->length = $_length;
             $this->genre = $_genre;
         }
+
+        public function getTitle() {
+            return $this->title;
+        }
     }
 
     require_once __DIR__.'/Attori.php';

@@ -21,9 +21,9 @@
     ];
 
     $programmazioneArray = [
-        new Schedule($filmArray[0], "28/02/2022", "14.00", $salaArray[0]),
-        new Schedule($filmArray[1], "28/02/2022", "16.00", $salaArray[1]),
-        new Schedule($filmArray[2], "28/02/2022", "21.00", $salaArray[2]),
+        new Schedule($filmArray[0], "28/02/2022", ["14.00", "16:00","21:00"], $salaArray[0]),
+        new Schedule($filmArray[1], "28/02/2022", ["10.00", "16.00", "21.00"], $salaArray[1]),
+        new Schedule($filmArray[2], "28/02/2022", ["18.00", "22.00"], $salaArray[2]),
     ];
 
 
@@ -54,9 +54,14 @@
     }
     var_dump("somma:$sum");
 
-    
+
     //3) Stabilito un giorno e un film, recuperare quante proiezioni totali di quel film ci saranno.
-
-
-
+    
+    for($i=0; $i<count($programmazioneArray[0]->getHour()); $i++){
+        $projections = $i++;
+    }
+    echo "Proiezioni del film:"." ".$filmArray[0]->getTitle()." "."nel giorno:"." ".$programmazioneArray[0]->getDate()." "."sono:"." ".$projections;
+    
     //4) Stabilito un giorno, recupera l’orario di fine dell’ultimo spettacolo.
+
+    
